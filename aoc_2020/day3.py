@@ -7,7 +7,7 @@ def get_data(filepath):
     return lines
 
 
-def traverse(filepath, x_incr, y_incr):
+def get_tree_ct(filepath, x_incr, y_incr):
     data = get_data(filepath)
     length = len(data)
     width = len(data[0])
@@ -20,12 +20,12 @@ def traverse(filepath, x_incr, y_incr):
     return tree_ct
 
 
-def get_product():
+def get_product(filepath):
     res = []
     slopes = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]
     for slope in slopes:
-        res.append(traverse('aoc_2020/data/day3_data.txt', slope[0], slope[1]))
+        res.append(get_tree_ct(filepath, slope[0], slope[1]))
     return math.prod(res)
 
 
-print(get_product())
+print(get_product('aoc_2020/data/day3_data.txt'))
