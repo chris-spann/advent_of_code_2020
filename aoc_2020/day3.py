@@ -24,11 +24,9 @@ def traverse(filepath, x_incr, y_incr):
 
 def get_product():
     res = []
-    res.append(traverse('aoc_2020/data/day3_data.txt', 1, 1))
-    res.append(traverse('aoc_2020/data/day3_data.txt', 3, 1))
-    res.append(traverse('aoc_2020/data/day3_data.txt', 5, 1))
-    res.append(traverse('aoc_2020/data/day3_data.txt', 7, 1))
-    res.append(traverse('aoc_2020/data/day3_data.txt', 1, 2))
+    slopes = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]
+    for slope in slopes:
+        res.append(traverse('aoc_2020/data/day3_data.txt', slope[0], slope[1]))
     return math.prod(res)
 
 
