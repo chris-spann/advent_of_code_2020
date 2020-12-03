@@ -20,12 +20,12 @@ def get_tree_ct(filepath, x_incr, y_incr):
     return tree_ct
 
 
-def get_product(filepath):
+def get_product(filepath, slopes):
     res = []
-    slopes = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]
     for slope in slopes:
         res.append(get_tree_ct(filepath, slope[0], slope[1]))
     return math.prod(res)
 
 
-print(get_product('aoc_2020/data/day3_data.txt'))
+print(get_product('aoc_2020/data/day3_data.txt',
+                  [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]))
