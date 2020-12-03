@@ -1,3 +1,6 @@
+import math
+
+
 def get_data(filepath):
     file = open(filepath, 'r')
     lines = file.read().splitlines()
@@ -26,10 +29,7 @@ def get_product():
     res.append(traverse('aoc_2020/data/day3_data.txt', 5, 1))
     res.append(traverse('aoc_2020/data/day3_data.txt', 7, 1))
     res.append(traverse('aoc_2020/data/day3_data.txt', 1, 2))
-    result = 1
-    for x in res:
-        result = result * x
-    return result
+    return math.prod(res)
 
 
 print(get_product())
