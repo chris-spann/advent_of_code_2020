@@ -11,9 +11,7 @@ def traverse(filepath, x_incr, y_incr):
     data = get_data(filepath)
     length = len(data)
     width = len(data[0])
-    tree_ct = 0
-    x_pos = 0
-    y_pos = 0
+    x_pos = y_pos = tree_ct = 0
     while y_pos < length:
         if data[y_pos][x_pos % width] == '#':
             tree_ct += 1
