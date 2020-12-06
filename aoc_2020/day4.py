@@ -44,4 +44,8 @@ def process_data(filepath):
     return valid_ct
 
 
-print(process_data('aoc_2020/data/day4_data.txt'))
+# print(process_data('aoc_2020/data/day4_data.txt'))
+print(is_valid_2('''
+    eyr:1972 cid:100
+    hcl:#18171d ecl:amb hgt:170 pid:186cm iyr:2018 byr:1926
+    '''))
